@@ -8,6 +8,7 @@ import Experience from './pages/experience';
 import Works from './pages/works';
 import About from './pages/about';
 import SocialMediaSideBar from './components/socialmedia';
+import Footer from './components/footer';
 
 function App() {
 	return (
@@ -16,7 +17,8 @@ function App() {
 			<div className="bg-bg min-h-screen overflow-x-hidden">
 				<Header />
 				<SocialMediaSideBar />
-				<div className="container max-w-screen-lg border mx-auto">
+				{/* <div className="container w-[90%] sm:w-[70%] max-w-screen-lg mx-auto overflow-visible "> */}
+				<div className=" w-screen max-w-[2000px] ps-10 sm:ps-32 md:ps-44 lg:ps-64 ">
 					<Routes>
 						<Route path="/" element={<Home />}></Route>
 						<Route path="/experience" element={<Experience />}></Route>
@@ -24,6 +26,7 @@ function App() {
 						<Route path="/about" element={<About />}></Route>
 					</Routes>
 				</div>
+				<Footer />
 			</div>
 		</>
 	);

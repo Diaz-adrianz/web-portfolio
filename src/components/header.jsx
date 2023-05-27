@@ -5,9 +5,9 @@ function Header() {
 	const currentPath = location.pathname.substring(1);
 
 	return (
-		<div className="m-8 flex justify-between">
+		<div className="p-8 fixed z-50 bg-bg w-full overflow-auto flex justify-between top-0 left-0 right-0">
 			<img src="./images/icon.png" className="w-12 h-12" alt="" />
-			<div className="relative flex items-center gap-8">
+			<div className="flex items-center gap-8">
 				<Link to="/" className={`link-header ${currentPath == '' ? 'on' : ''}`}>
 					Home
 				</Link>

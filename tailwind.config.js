@@ -12,6 +12,9 @@ export default {
 				gray: '#454545',
 				black: '#0a0a0a',
 				white: '#E0E0E0',
+				accenttint: 'rgba(0, 232, 211, 0.15)',
+				blacktint: 'rgba(0,0,0,0.7)',
+				red: '#ff2a48',
 			},
 			fontFamily: {
 				josefinbold: ['JOSEFIN-BOLD'],

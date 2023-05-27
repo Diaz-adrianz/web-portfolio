@@ -24,7 +24,7 @@
 
 @layer utilities {
 	.text-big {
-		@apply font-josefinbold text-6xl leading-snug text-white;
+		@apply font-josefinbold text-6xl leading-tight text-white;
 	}
 
 	.text-header {
@@ -36,7 +36,7 @@
 	}
 
 	.text-normal {
-		@apply font-josefinregular text-xl leading-snug text-silver;
+		@apply font-josefinregular text-xl leading-normal text-silver;
 	}
 
 	.text-mini {
@@ -44,11 +44,57 @@
 	}
 
 	.text-normal-mono {
-		@apply font-jetbrainsregular text-lg text-accent;
+		@apply font-jetbrainsregular text-lg;
 	}
 
 	.text-mini-mono {
-		@apply font-jetbrainsregular text-sm text-silver;
+		@apply font-jetbrainsregular text-sm;
+	}
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	.no-scrollbar {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
+
+	.btn {
+		@apply border border-accent cursor-pointer flex justify-center py-4 px-6 rounded-lg gap-3 items-center;
+		transition: 0.2s;
+	}
+	.btn.disable {
+		@apply border-gray bg-secondary pointer-events-none;
+	}
+	.btn.disable > span {
+		@apply text-gray;
+	}
+	.btn:hover {
+		@apply bg-accenttint;
+	}
+	.btn > i {
+		@apply text-2xl text-accent;
+	}
+	.btn > span {
+		@apply text-normal-mono text-accent;
+	}
+
+	.link {
+		@apply font-jetbrainsregular inline-flex gap-2 items-center text-accent;
+		transition: 0.2s;
+		font-size: inherit;
+	}
+	.link:hover {
+		@apply text-accenttint;
+	}
+
+	li {
+		@apply mb-4 relative ps-10;
+	}
+
+	li::before {
+		@apply absolute w-5 h-2 bg-accent rounded left-0 top-2;
+		content: '';
 	}
 
 	/* component : HEADER */
