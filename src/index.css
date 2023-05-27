@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'JOSEFIN-BOLD';
+	src: url('assets/font/JosefinSans-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'JOSEFIN-SEMIBOLD';
+	src: url('assets/font/JosefinSans-SemiBold.ttf');
+}
+
+@font-face {
+	font-family: 'JOSEFIN-REG';
+	src: url('assets/font/JosefinSans-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'JETBRAINS-REG';
+	src: url('assets/font/JetBrainsMono-Regular.ttf');
+}
+
+@layer utilities {
+	.text-big {
+		@apply font-josefinbold text-6xl leading-snug text-white;
+	}
+
+	.text-header {
+		@apply font-josefinbold text-4xl leading-normal text-secondary;
+	}
+
+	.text-subheader {
+		@apply font-josefinsemibold text-3xl text-white;
+	}
+
+	.text-normal {
+		@apply font-josefinregular text-xl leading-snug text-silver;
+	}
+
+	.text-mini {
+		@apply font-josefinregular text-base leading-snug text-silver;
+	}
+
+	.text-normal-mono {
+		@apply font-jetbrainsregular text-lg text-accent;
+	}
+
+	.text-mini-mono {
+		@apply font-jetbrainsregular text-sm text-silver;
+	}
+
+	/* component : HEADER */
+	.link-header {
+		@apply text-normal text-silver;
+		transition: 0.2s;
+	}
+
+	.link-header:hover,
+	.link-header.on {
+		@apply text-white;
+		transform: translateY(-4px);
+	}
+
+	.link-header::after {
+		@apply bg-accent  rounded w-0 absolute top-full translate-y-1/2 left-1/2 -translate-x-1/2 h-1;
+		content: '';
+		transition: 0.3s;
+	}
+
+	.link-header.on::after {
+		@apply block w-6;
+	}
+}
+
