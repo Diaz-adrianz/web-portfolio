@@ -11,7 +11,7 @@ function Works() {
 
 	return (
 		<div className="sm:pe-32 md:pe-44 lg:pe-64 pe-10">
-			<section className="min-h-screen flex flex-col pb-64 justify-center">
+			<section className="min-h-screen flex flex-col pb-28 justify-center">
 				<h1 className="text-big">Works</h1>
 				<p className="text-normal max-w-xl mt-8">
 					There many projects i’ve built. From client, school assignment even to fill my bored time.
@@ -25,7 +25,7 @@ function Works() {
 								i % 2 == 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
 							} gap-4 lg:gap-16 items-start justify-between`}
 						>
-							<div className="major min-w-[300px] max-w-md">
+							<div className="major min-w-[260px] sm:min-w-[300px] max-w-md">
 								<GalleryBox images={dat.images} />
 							</div>
 							<div className="minor">

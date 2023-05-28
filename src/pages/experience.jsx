@@ -11,7 +11,7 @@ function Experience() {
 
 	return (
 		<div className="pe-10 sm:pe-32 md:pe-44 lg:pe-64">
-			<section className="min-h-screen pb-64 flex flex-col  justify-center">
+			<section className="min-h-screen pb-28 flex flex-col  justify-center">
 				<h1 className="text-big">Experience</h1>
 				<p className="text-normal max-w-xl mt-8">
 					Here I work with my passion wholeheartedly and always believe every place gives me valuable “stories”
@@ -25,7 +25,7 @@ function Experience() {
 								i % 2 == 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
 							} gap-4  lg:gap-16 items-start justify-between`}
 						>
-							<div className="major min-w-[300px] max-w-md">
+							<div className="major min-w-[260px] sm:min-w-[300px] max-w-md">
 								<GalleryBox images={dat.images} />
 							</div>
 							<div className="minor">

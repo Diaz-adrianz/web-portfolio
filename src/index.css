@@ -37,7 +37,7 @@
 		@apply bg-yellow;
 	}
 	.text-big {
-		@apply font-josefinbold text-6xl leading-tight text-white;
+		@apply font-josefinbold text-5xl sm:text-7xl leading-tight text-white;
 	}
 
 	.text-header {

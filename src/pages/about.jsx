@@ -5,15 +5,15 @@ import ImageBox from '../components/imagebox';
 function About() {
 	return (
 		<>
-			<section className="min-h-screen pe-10 sm:pe-32 md:pe-44 lg:pe-64 pb-64 flex flex-col  justify-center">
+			<section className="min-h-screen pe-10 sm:pe-32 md:pe-44 lg:pe-64 pb-28 flex flex-col  justify-center">
 				<h1 className="text-big">About Me.</h1>
 				<p className="text-normal max-w-xl mt-8">
 					Let me introduce myself. How about my life is going, i hope you enjoy and interested.
 				</p>
 			</section>
 			<section className="mb-64 pe-10 sm:pe-32 md:pe-44 lg:pe-64">
-				<div className="flex flex-col items-start gap-16 lg:flex-row justify-start">
-					<div className="minor min-w-[300px] max-w-md">
+				<div className="flex flex-col items-start gap-2 lg:gap-16 lg:flex-row justify-start">
+					<div className="minor min-w-[240px] sm:min-w-[300px] max-w-md">
 						<GalleryBox images={aboutMe.images} />
 					</div>
 					<div className="major">
@@ -69,7 +69,7 @@ const loopAchievments = (items) => {
 		rows.push(
 			<div className="w-100 flex gap-4 overflow-auto no-scrollbar" key={i}>
 				{rowItems.map((item, index) => (
-					<div key={index} className="min-w-[300px] md:min-w-[450px]">
+					<div key={index} className="min-w-[260px] sm:min-w-[300px] md:min-w-[450px]">
 						<ImageBox src={item.src} title={item.title} caption={item.caption} tags={[]} />
 					</div>
 				))}

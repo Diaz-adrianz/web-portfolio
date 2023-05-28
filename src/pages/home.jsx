@@ -7,6 +7,7 @@ import { getTextFromReactElement } from '../helpers/common';
 import { DescAtHome } from '../values/about';
 
 import { myExperiences } from '../values/expeerience';
+import { myReviews } from '../values/reviews';
 import { myWorks } from '../values/works';
 
 function Home() {
@@ -37,7 +38,7 @@ function Home() {
 
 	return (
 		<>
-			<section className="min-h-screen pe-10 sm:pe-32 md:pe-44 lg:pe-64 pb-40 flex flex-col items-start justify-center">
+			<section className="min-h-screen pe-10 sm:pe-32 md:pe-44 lg:pe-64 pb-12 sm:pb-28 flex flex-col items-start justify-center">
 				<span className="text-normal-mono text-accent mb-4">Hello, my name is</span>
 				<h1 className="text-big">
 					Diaz Adrianz
@@ -45,7 +46,8 @@ function Home() {
 					<span id="tagline">A Curious Software Developer</span>
 				</h1>
 				<p className="text-normal max-w-xl mt-8">
-					Here I work with my passion wholeheartedly and always believe every place gives me valuable “stories”
+					Currently, i am a vocational student at SMKN 4 Bandung in field software engineer. Even so. i open for new
+					opportunity.
 				</p>
 				<a href="" className="btn mt-8">
 					<i className="ri-download-2-line"></i>
@@ -84,11 +86,45 @@ function Home() {
 				</Link>
 			</section>
 
+			{/* SERVICES  */}
+			<section className="mb-64 pe-10 sm:pe-32 md:pe-44 lg:pe-64">
+				<h1 className="text-header mb-2">What can I do for you?.</h1>
+				<p className="text-normal max-w-2xl mb-20">
+					I am open to any like these works!{' '}
+					<a href="/about#skills" className="link">
+						<span className="text-mini-mono">See tools I use</span>
+					</a>
+				</p>
+				<div className="grid w-full gap-4 grid-cols-1 sm:grid-cols-3">
+					<div className="bg-secondary hover:-translate-y-2 transition-transform rounded-2xl p-8 flex flex-col items-center gap-4">
+						<i
+							className={`text-8xl ri-window-line`}
+							// style={{ color: skil.iconTint }}
+						></i>
+						<p className="text-subheader text-silver">Web Development</p>
+					</div>
+					<div className="bg-secondary hover:-translate-y-2 transition-transform rounded-2xl p-8 flex flex-col items-center gap-4">
+						<i
+							className={`text-8xl ri-window-line`}
+							// style={{ color: skil.iconTint }}
+						></i>
+						<p className="text-subheader text-silver">Backend Development</p>
+					</div>
+					<div className="bg-secondary hover:-translate-y-2 transition-transform rounded-2xl p-8 flex flex-col items-center gap-4">
+						<i
+							className={`text-8xl ri-window-line`}
+							// style={{ color: skil.iconTint }}
+						></i>
+						<p className="text-subheader text-silver">Mobile Development</p>
+					</div>
+				</div>
+			</section>
+
 			{/* ABOUT  */}
 			<section className="mb-64 pe-10  sm:pe-32 md:pe-44 lg:pe-64">
 				<h1 className="text-header mb-20">About Me.</h1>
-				<div className="flex items-center lg:items-start gap-16 flex-col lg:flex-row-reverse">
-					<div className="minor relative min-w-[300px] max-w-md">
+				<div className="flex items-center lg:items-start gap-4 lg:gap-16 flex-col lg:flex-row-reverse">
+					<div className="minor relative min-w-[260px] sm:min-w-[300px] max-w-md">
 						<ImageBox src={DescAtHome.image.src} title={DescAtHome.image.title} caption={''} tags={[]} />;
 						<div className="absolute top-10 -left-10 bg-yellow px-4 py-1 flex gap-2 items-center  rounded-full">
 							<i className={`ri-${DescAtHome.personalities[0].icon} text-2xl`}></i>
@@ -113,10 +149,38 @@ function Home() {
 				</div>
 			</section>
 
+			{/* REVIEWS */}
+			<section className="mb-64 pe-10 sm:pe-32 md:pe-44 lg:pe-64">
+				<h1 className="text-header mb-2">What've They Said.</h1>
+				<p className="text-normal max-w-2xl mb-20">Most of them review positively. Next yours review here!</p>
+				<div className="w-full flex flex-wrap gap-4">
+					{myReviews.map((rev, i) => {
+						return (
+							<div className="bg-secondary w-80 p-6 rounded-2xl">
+								<h1 className="text-6xl ri-double-quotes-r text-bg"></h1>
+								<div className="mt-4 mb-8">{rev.text}</div>
+								<div className="flex gap-4 items-center	">
+									<img src={rev.image} className="w-12 h-12 rounded-full" alt="" />
+									<div className="">
+										<h4 className="text-normal ">{rev.name}</h4>
+										<p className="-mt-1 text-mini-mono text-silver">
+											{rev.role}{' '}
+											<a href={rev.place.link} className="link">
+												@{rev.place.name}
+											</a>
+										</p>
+									</div>
+								</div>
+							</div>
+						);
+					})}
+				</div>
+			</section>
+
 			{/* CONTACT  */}
 			<section id="contact" className="mb-64 pe-10  sm:pe-32 md:pe-44 lg:pe-64">
-				<h1 className="text-header text-white mb-20">Lets Talk About Action Now</h1>
-				<p className="text-normal max-w-2xl mb-8">
+				<h1 className="text-header text-white mb-2">Lets Talk About Action Now</h1>
+				<p className="text-normal max-w-2xl mb-20">
 					Currently i open to any opportunity in part time work. Maybe you have question or thought, i’ll try my best to
 					get back to you.
 				</p>
@@ -127,13 +191,13 @@ function Home() {
 								<div className="border border-yellow rounded-full flex w-20 h-20">
 									<i className="ri-mail-line text-4xl text-yellow m-auto"></i>
 								</div>
-								<p className="text-subheader">diazz.developer@gmail.com</p>
+								<p className="text-normal sm:text-subheader">diazz.developer@gmail.com</p>
 							</div>
 							<div className="flex items-center gap-8">
 								<div className="border border-yellow rounded-full flex w-20 h-20">
 									<i className="ri-phone-line text-4xl text-yellow m-auto"></i>
 								</div>
-								<p className="text-subheader">
+								<p className="text-normal sm:text-subheader">
 									+62 01234142543 <span className="text-secondary">(fake)</span>
 								</p>
 							</div>
@@ -141,7 +205,7 @@ function Home() {
 								<div className="border border-yellow rounded-full flex w-20 h-20">
 									<i className="ri-map-pin-2-line text-4xl text-yellow m-auto"></i>
 								</div>
-								<p className="text-subheader">Bandung, West Java, Indonesia</p>
+								<p className="text-normal sm:text-subheader">Bandung, West Java, Indonesia</p>
 							</div>
 						</div>
 					</div>

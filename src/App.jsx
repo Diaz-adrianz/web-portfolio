@@ -18,7 +18,7 @@ function App() {
 				<Header />
 				<SocialMediaSideBar />
 				{/* <div className="container w-[90%] sm:w-[70%] max-w-screen-lg mx-auto overflow-visible "> */}
-				<div className=" w-screen max-w-[1600px] ps-10 sm:ps-32 md:ps-44 lg:ps-64 ">
+				<div className=" w-screen  max-w-[1600px] ps-10 sm:ps-32 md:ps-44 lg:ps-64 ">
 					<Routes>
 						<Route path="/" element={<Home />}></Route>
 						<Route path="/experience" element={<Experience />}></Route>

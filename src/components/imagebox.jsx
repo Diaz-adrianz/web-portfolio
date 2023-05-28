@@ -11,8 +11,12 @@ const ImageBox = (props) => {
 					{props.caption}
 				</p>
 				<div className="group-hover:opacity-100 group-hover:top-0 transition-all top-8 opacity-0 relative flex-wrap flex gap-2">
-					{props.tags.map((tag) => {
-						return <p className="bg-secondary text-silver rounded-full px-4 py-1">{tag}</p>;
+					{props.tags.map((tag, i) => {
+						return (
+							<p key={i} className="text-mini-mono bg-secondary text-silver rounded-full px-4 py-1">
+								{tag}
+							</p>
+						);
 					})}
 				</div>
 			</div>
