@@ -9,8 +9,18 @@ import Works from './pages/works';
 import About from './pages/about';
 import SocialMediaSideBar from './components/socialmedia';
 import Footer from './components/footer';
+import { useEffect } from 'react';
 
 function App() {
+	useEffect(() => {
+		var link = document.querySelector("link[rel~='icon']");
+		if (!link) {
+			link = document.createElement('link');
+			link.rel = 'icon';
+			document.head.appendChild(link);
+		}
+		link.href = './images/icon.png';
+	}, []);
 	return (
 		<>
 			<ToastContainer position="top-center" theme="colored" limit={2} autoClose={2000} pauseOnFocusLoss={false} />
