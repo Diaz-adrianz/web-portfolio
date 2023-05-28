@@ -21,7 +21,7 @@ function Experience() {
 			</section>
 			{data.map((dat, i) => {
 				return (
-					<section key={i} className="mb-64">
+					<section key={i} id={'exp-' + dat.place.name} className="mb-64">
 						<div
 							className={`flex flex-col ${
 								i % 2 == 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
@@ -30,7 +30,7 @@ function Experience() {
 							<div
 								data-aos={i % 2 == 0 ? 'fade-right' : 'fade-left'}
 								data-aos-duration="700"
-								className="major min-w-[260px] sm:min-w-[300px] max-w-md"
+								className="major min-w-[260px] sm:min-w-[300px] lg:min-w-[400px] max-w-md"
 							>
 								<GalleryBox images={dat.images} />
 							</div>
@@ -60,6 +60,7 @@ function Experience() {
 											data-aos="fade-right"
 											data-aos-duration="700"
 											data-aos-delay={key * 150}
+											target="_blank"
 											href={cred}
 											key={key}
 											className="link mt-8"

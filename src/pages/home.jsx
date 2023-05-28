@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import ImageBox from '../components/imagebox';
 
-import { getTextFromReactElement } from '../helpers/common';
+import { getTextFromReactElement, gotoSection } from '../helpers/common';
 import { DescAtHome } from '../values/about';
 
 import { myExperiences } from '../values/expeerience';
@@ -32,8 +32,8 @@ function Home() {
 	};
 
 	useEffect(() => {
-		setWorks(myWorks.slice(0, 4));
-		setExps(myExperiences.slice(0, 4));
+		setWorks(myWorks.slice(0, 3));
+		setExps(myExperiences.slice(0, 3));
 	}, []);
 
 	return (
@@ -89,8 +89,8 @@ function Home() {
 						<div data-aos-once="true" data-aos="fade-up" data-aos-duration="700">
 							<ImageBox
 								src={work.images[0].src}
-								title={work.images[0].title}
-								caption={work.images[0].caption}
+								title={work.title}
+								caption={getTextFromReactElement(work.desc).substring(0, 120) + '...'}
 								tags={work.tags}
 							/>
 						</div>
@@ -163,15 +163,10 @@ function Home() {
 				</h1>
 				<div className="flex items-center lg:items-start gap-4 lg:gap-16 flex-col lg:flex-row-reverse">
 					<div className="minor relative min-w-[260px] sm:min-w-[300px] max-w-md">
-						<ImageBox
-							data-aos="zoom-out"
-							data-aos-duration="700"
-							src={DescAtHome.image.src}
-							title={DescAtHome.image.title}
-							caption={''}
-							tags={[]}
-						/>
-						;
+						<div data-aos="zoom-out" data-aos-duration="700">
+							<ImageBox src={DescAtHome.image.src} title={DescAtHome.image.title} caption={''} tags={[]} />
+						</div>
+
 						<div
 							data-aos="fade-right"
 							data-aos-duration="700"
@@ -385,7 +380,7 @@ function Home() {
 }
 
 const ExpCard = (props) => {
-	let maxwords = 200;
+	let maxwords = 300;
 
 	return (
 		<div className="min-w-full sm:min-w-[400px] md:min-w-[600px] lg:min-w-[650px] pe-12">
@@ -416,10 +411,14 @@ const ExpCard = (props) => {
 				})}
 			</ul>
 
-			<a href="" className="link mt-8">
+			<Link
+				onClick={(e) => gotoSection('exp-' + props.place.name)}
+				to={'/experience#' + 'exp-' + props.place.name}
+				className="link mt-8 cursor-pointer"
+			>
 				See all
 				<span className="ri-arrow-right-up-line"></span>
-			</a>
+			</Link>
 		</div>
 	);
 };

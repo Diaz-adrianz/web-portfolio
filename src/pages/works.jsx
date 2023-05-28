@@ -67,6 +67,7 @@ function Works() {
 												data-aos-duration="700"
 												data-aos-delay={key * 150}
 												key={key}
+												target="_blank"
 												href={link.link}
 												className="link"
 											>

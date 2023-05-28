@@ -26,7 +26,7 @@ export const DescAtHome = {
 		},
 	],
 	image: {
-		src: './images/bigsur.jpg',
+		src: './images/me3.jpg',
 		title: 'Its me!',
 	},
 };
@@ -38,8 +38,9 @@ export const aboutMe = {
 		</h1>
 	),
 	images: [
-		{ src: './images/icon.png', title: 'Logoku', caption: 'Ini ya logoku mana logomu' },
-		{ src: './images/bigsur.jpg', title: 'Big Sur', caption: 'wallpaper khas apple (pengen jir)' },
+		{ src: './images/me1.jpg', title: 'Its Me', caption: 'Picture at Polban High School' },
+		{ src: './images/me2.jpg', title: 'Its Me 2', caption: 'Picture at village on Sukabumi' },
+		{ src: './images/me4.jpg', title: 'Its Me 3', caption: 'Old pict of me' },
 	],
 	roles: ['Software Engineer', 'IT Mentor'],
 	longDesc: (
@@ -52,8 +53,26 @@ export const aboutMe = {
 		</p>
 	),
 	achievements: [
-		{ src: './images/icon.png', title: 'Logoku', caption: 'Ini ya logoku mana logomu' },
-		{ src: './images/bigsur.jpg', title: 'Big Sur', caption: 'wallpaper khas apple (pengen jir)' },
+		{
+			src: './images/cert_eduwork.png',
+			title: 'Eduwork FreeClass',
+			caption: 'Online course to learn basic web development (html, css, js, jquery, bootstrap, php, mysql)',
+		},
+		{
+			src: './images/cert_dicoding_be.jpg',
+			title: 'Dicoding Basic BackEnd',
+			caption: 'No 1 online cource in Indonesia to learn basic backend NodeJs Express stack',
+		},
+		{
+			src: './images/cert_dicoding_basicjs.jpg',
+			title: 'Dicoding Basic JavaScript',
+			caption: 'No 1 online cource in Indonesia to learn basic javascript programming',
+		},
+		{
+			src: './images/cert_bfi.jpg',
+			title: 'First Place BFI',
+			caption: '1st place winner in 1 day Mini Hackathon Bussiness Plan initiate by BFI with my 3 other friends',
+		},
 	],
 	skills: [
 		{
@@ -85,6 +104,36 @@ export const aboutMe = {
 			link: '',
 			iconTint: '#589636',
 			title: 'MongoDB',
+		},
+		{
+			icon: 'tailwindcss-original',
+			link: '',
+			iconTint: '#e3342f',
+			title: 'Tailwindcss',
+		},
+		{
+			icon: 'android-plain',
+			link: '',
+			iconTint: '#3DDC84',
+			title: 'Android Studio',
+		},
+		{
+			icon: 'mysql-plain',
+			link: '',
+			iconTint: '#f29111',
+			title: 'MySql',
+		},
+		{
+			icon: 'java-plain',
+			link: '',
+			iconTint: '#f89820',
+			title: 'Java',
+		},
+		{
+			icon: 'figma-plain',
+			link: '',
+			iconTint: '#FF7262',
+			title: 'Figma',
 		},
 	],
 };
