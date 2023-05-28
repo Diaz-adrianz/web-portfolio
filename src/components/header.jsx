@@ -20,7 +20,7 @@ function Header() {
 				<Link to="/about" className={`link-header ${currentPath == 'about' ? 'on' : ''}`}>
 					About
 				</Link>
-				<Link to="#contact" className="link-header">
+				<Link to="./#contact" className="link-header">
 					Contact
 				</Link>
 			</div>

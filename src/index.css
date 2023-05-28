@@ -23,6 +23,19 @@
 }
 
 @layer utilities {
+	/* scrollbar */
+	::-webkit-scrollbar {
+		width: 6px;
+	}
+	::-webkit-scrollbar-track {
+		@apply bg-secondary;
+	}
+	::-webkit-scrollbar-thumb {
+		@apply bg-gray rounded;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		@apply bg-yellow;
+	}
 	.text-big {
 		@apply font-josefinbold text-6xl leading-tight text-white;
 	}
@@ -95,6 +108,19 @@
 	li::before {
 		@apply absolute w-5 h-2 bg-accent rounded left-0 top-2;
 		content: '';
+	}
+
+	.fade {
+		animation: fade 0.4s forwards;
+	}
+
+	@keyframes fade {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
 	}
 
 	/* component : HEADER */

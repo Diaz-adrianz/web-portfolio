@@ -37,8 +37,8 @@ function Home() {
 
 	return (
 		<>
-			<section className="min-h-screen pb-40 flex flex-col items-start justify-center">
-				<span className="text-mini-mono text-accent mb-4">Hello, my name is</span>
+			<section className="min-h-screen pe-10 sm:pe-32 md:pe-44 lg:pe-64 pb-40 flex flex-col items-start justify-center">
+				<span className="text-normal-mono text-accent mb-4">Hello, my name is</span>
 				<h1 className="text-big">
 					Diaz Adrianz
 					<br />
@@ -68,7 +68,14 @@ function Home() {
 				<h1 className="text-header mb-20">Works.</h1>
 
 				{works.map((work, key) => {
-					return <ImageBox src={work.images[0]} title={work.title} caption={work.shortdesc} tags={work.tags} />;
+					return (
+						<ImageBox
+							src={work.images[0].src}
+							title={work.images[0].title}
+							caption={work.images[0].caption}
+							tags={work.tags}
+						/>
+					);
 				})}
 
 				<Link to={'/work'} className="link mt-8">
@@ -80,7 +87,7 @@ function Home() {
 			{/* ABOUT  */}
 			<section className="mb-64 pe-10  sm:pe-32 md:pe-44 lg:pe-64">
 				<h1 className="text-header mb-20">About Me.</h1>
-				<div className="flex items-start gap-16 flex-col md:flex-row-reverse">
+				<div className="flex items-center lg:items-start gap-16 flex-col lg:flex-row-reverse">
 					<div className="minor relative min-w-[300px] max-w-md">
 						<ImageBox src={DescAtHome.image.src} title={DescAtHome.image.title} caption={''} tags={[]} />;
 						<div className="absolute top-10 -left-10 bg-yellow px-4 py-1 flex gap-2 items-center  rounded-full">
@@ -107,13 +114,13 @@ function Home() {
 			</section>
 
 			{/* CONTACT  */}
-			<section className="mb-64 pe-10  sm:pe-32 md:pe-44 lg:pe-64">
+			<section id="contact" className="mb-64 pe-10  sm:pe-32 md:pe-44 lg:pe-64">
 				<h1 className="text-header text-white mb-20">Lets Talk About Action Now</h1>
 				<p className="text-normal max-w-2xl mb-8">
 					Currently i open to any opportunity in part time work. Maybe you have question or thought, i’ll try my best to
 					get back to you.
 				</p>
-				<div className="flex md:flex-row justify-between gap-16 flex-col">
+				<div className="flex lg:flex-row justify-between gap-16 flex-col">
 					<div className="minor">
 						<div className="flex flex-col gap-8">
 							<div className="flex items-center gap-8">
@@ -207,18 +214,18 @@ const ExpCard = (props) => {
 			</h1>
 			<span className="text-mini-mono text-silver">{props.date.start + ' - ' + props.date.end}</span>
 			<ul className="mt-8">
-				{props.points.map((p) => {
-					if (maxwords < 0) return '';
+				{props.points.map((p, key) => {
+					if (maxwords < 0) return <span key={key}></span>;
 
 					if (getTextFromReactElement(p).length < maxwords) {
 						maxwords -= getTextFromReactElement(p).length;
 
-						return <li>{p}</li>;
+						return <li key={key}>{p}</li>;
 					} else {
 						maxwords -= getTextFromReactElement(p).length;
 
 						return (
-							<li>
+							<li key={key}>
 								<p className="text-normal">...</p>
 							</li>
 						);

@@ -1,6 +1,9 @@
 export const myExperiences = [
 	{
-		images: [],
+		images: [
+			{ src: './images/icon.png', title: 'Logoku', caption: 'Ini ya logoku mana logomu' },
+			{ src: './images/bigsur.jpg', title: 'Big Sur', caption: 'wallpaper khas apple (pengen jir)' },
+		],
 		title: 'Scholarship',
 		place: {
 			name: 'Inagri',
@@ -27,7 +30,10 @@ export const myExperiences = [
 		credentials: ['https://google.com'],
 	},
 	{
-		images: [],
+		images: [
+			{ src: './images/icon.png', title: 'Logoku', caption: 'Ini ya logoku mana logomu' },
+			{ src: './images/bigsur.jpg', title: 'Big Sur', caption: 'wallpaper khas apple (pengen jir)' },
+		],
 		title: 'Scholarship',
 		place: {
 			name: 'Inagri',

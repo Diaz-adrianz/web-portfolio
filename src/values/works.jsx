@@ -1,11 +1,14 @@
 export const myWorks = [
 	{
-		images: ['./images/bigsur.jpg'],
+		images: [
+			{ src: './images/icon.png', title: 'Logoku', caption: 'Ini ya logoku mana logomu' },
+			{ src: './images/bigsur.jpg', title: 'Big Sur', caption: 'wallpaper khas apple (pengen jir)' },
+		],
 		type: 'Mobile APP',
 		title: 'Comikaze',
 		shortdesc: 'A mobile app for reading manga, manhua, and manhwa in Indonesian translation.',
 		desc: (
-			<p>
+			<p className="text-normal">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non tellus sodales, venenatis est nec, interdum
 				lacus. Aliquam sit amet diam et leo aliquam imperdiet. Nullam eu scelerisque lacus. Proin et orci ante. Maecenas
 				ut quam id elit pharetra pellentesque vitae ac nulla. Ut vitae nibh non diam tristique eleifend sed vel diam.
@@ -25,12 +28,15 @@ export const myWorks = [
 		],
 	},
 	{
-		images: ['./images/bigsur.jpg'],
+		images: [
+			{ src: './images/icon.png', title: 'Logoku', caption: 'Ini ya logoku mana logomu' },
+			{ src: './images/bigsur.jpg', title: 'Big Sur', caption: 'wallpaper khas apple (pengen jir)' },
+		],
 		type: 'Mobile APP',
 		title: 'Comikaze',
 		shortdesc: 'A mobile app for reading manga, manhua, and manhwa in Indonesian translation.',
 		desc: (
-			<p>
+			<p className="text-normal">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non tellus sodales, venenatis est nec, interdum
 				lacus. Aliquam sit amet diam et leo aliquam imperdiet. Nullam eu scelerisque lacus. Proin et orci ante. Maecenas
 				ut quam id elit pharetra pellentesque vitae ac nulla. Ut vitae nibh non diam tristique eleifend sed vel diam.
