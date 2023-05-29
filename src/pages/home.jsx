@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import isEmail from 'validator/lib/isemail';
 
 import ImageBox from '../components/imagebox';
 
@@ -25,6 +24,11 @@ function Home() {
 		'https://script.google.com/macros/s/AKfycbzWzRKOKIXO7SNu4uhFhN1wr3ZF4mploJc2Bk2SnuR7vyNs9lakVmCr5otxBl6cOice/exec';
 	const sheet_id = 'AKfycbzWzRKOKIXO7SNu4uhFhN1wr3ZF4mploJc2Bk2SnuR7vyNs9lakVmCr5otxBl6cOice';
 
+	const isEmail = (str) => {
+		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+		return emailRegex.test(str);
+	};
 	const formControl = (e, val) => {
 		setSurat((prevSurat) => {
 			const newSurat = {
