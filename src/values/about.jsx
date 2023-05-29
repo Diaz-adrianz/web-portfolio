@@ -1,15 +1,23 @@
 export const DescAtHome = {
 	desc: (
-		<p className="text-normal">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non tellus sodales, venenatis est nec, interdum
-			lacus. Aliquam sit amet diam et leo aliquam imperdiet. Nullam eu scelerisque lacus. Proin et orci ante. Maecenas
-			ut quam id elit pharetra pellentesque vitae ac nulla. Ut vitae nibh non diam tristique eleifend sed vel diam. Cras
-			velit purus, feugiat sed tempor id, sagittis id justo. Aenean elementum quis lorem vel suscipit. Quisque id
-			laoreet lorem. Proin ac eros ut lectus vehicula rhoncus. Quisque at neque sodales, varius sapien id, pulvinar
-			sapien. Nunc quis purus cursus, viverra neque et, dictum ante. Pellentesque porta iaculis tellus, vel bibendum
-			arcu. Praesent maximus dignissim nunc eu semper. Aliquam eu blandit ante. Ut quis nisl vitae neque consectetur
-			faucibus.
-		</p>
+		<>
+			<p className="text-normal mb-4">
+				A dedicated <span className="text-yellow">informatics engineering</span> student from Bandung, Indonesia. With a
+				focus on full-stack web development, I have spent the past <span className="text-yellow">2 years</span>{' '}
+				mastering this field. I possess the skills to plan and develop creative applications that{' '}
+				<span className="text-yellow">meet industry needs</span>, particularly excelling in frontend development. With a
+				result-oriented mindset, attention to detail, and a keen eye for visual aesthetics, I strive to deliver{' '}
+				<span className="text-yellow">seamless and visually stunning</span> applications.
+			</p>
+			<p className="text-normal">
+				Furthermore, I have a passion for <span className="text-yellow">design</span> and enjoy using tools like Figma
+				to create <span className="text-yellow">captivating user experiences</span>. Combining my development expertise
+				with my design skills, I am wholeheartedly committed to pursuing a successful career in{' '}
+				<span className="text-yellow">frontend development</span>. I am excited to showcase my creativity, skills, and
+				commitment to <span className="text-yellow">delivering exceptional results</span> in the dynamic world of
+				frontend development.
+			</p>
+		</>
 	),
 	personalities: [
 		{
@@ -44,13 +52,34 @@ export const aboutMe = {
 	],
 	roles: ['Software Engineer', 'IT Mentor'],
 	longDesc: (
-		<p className="text-normal">
-			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere consectetur asperiores, consequuntur mollitia
-			quia ea laborum, quo aliquam voluptatum praesentium hic adipisci quos beatae officia, doloribus ab ipsam. Ea,
-			repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, quasi quidem quibusdam
-			perspiciatis, culpa ad quam mollitia quo totam quas corporis ea amet velit? Eius repudiandae nostrum voluptatibus
-			similique, laudantium et non nisi obcaecati provident asperiores natus rerum nesciunt iste?
-		</p>
+		<>
+			<p className="text-normal mb-4">
+				My name is <span className="text-yellow">Diaz Adrianz</span>, and I come from Bandung, West Java,{' '}
+				<span className="text-yellow">Indonesia</span>. Currently, I am a <span className="text-yellow">student</span>{' '}
+				at SMKN4Bandung, where I am majoring in <span className="text-yellow">informatics engineering</span> with a
+				focus on <span className="text-yellow">full-stack</span>. Over the past 2 years, I have dedicated myself to
+				mastering this field. Witnessing the rapid growth and increasing demand for Information Technology has fueled my
+				motivation, and I aspire to <span className="text-yellow">contribute to building innovative solutions</span>.
+			</p>
+			<p className="text-normal mb-4">
+				I possess the skills to <span className="text-yellow">plan and develop creative</span> applications that cater
+				to specific industry needs. While I have knowledge in full-stack development, my passion lies more in{' '}
+				<span className="text-yellow">frontend development</span>. I approach my work with a result-oriented mindset,
+				paying close attention to details, future scalability, and visual aesthetics. In addition to my development
+				skills, I also have a <span className="text-yellow">passion for design</span>. I thoroughly enjoy creating
+				visually appealing interfaces and <span className="text-yellow">bringing them to life</span>. I am proficient in
+				using design tools like Figma to design captivating layouts and captivating{' '}
+				<span className="text-yellow">user experiences</span>. Combining my development expertise with my design skills,
+				I strive to deliver seamless and visually stunning applications that leave a lasting{' '}
+				<span className="text-yellow">impression on users</span>.
+			</p>
+			<p className="text-normal">
+				Driven by my love for application development, I am{' '}
+				<span className="text-yellow">wholeheartedly committed</span> to pursuing a successful career in frontend
+				development, where I can showcase my creativity and skills to their{' '}
+				<span className="text-yellow">fullest potential</span>.
+			</p>
+		</>
 	),
 	achievements: [
 		{
@@ -59,17 +88,17 @@ export const aboutMe = {
 			caption: 'Online course to learn basic web development (html, css, js, jquery, bootstrap, php, mysql)',
 		},
 		{
-			src: './images/cert_dicoding_be.jpg',
+			src: './images/cert_dicoding_be.png',
 			title: 'Dicoding Basic BackEnd',
 			caption: 'No 1 online cource in Indonesia to learn basic backend NodeJs Express stack',
 		},
 		{
-			src: './images/cert_dicoding_basicjs.jpg',
+			src: './images/cert_dicoding_basicjs.png',
 			title: 'Dicoding Basic JavaScript',
 			caption: 'No 1 online cource in Indonesia to learn basic javascript programming',
 		},
 		{
-			src: './images/cert_bfi.jpg',
+			src: './images/cert_bfi.png',
 			title: 'First Place BFI',
 			caption: '1st place winner in 1 day Mini Hackathon Bussiness Plan initiate by BFI with my 3 other friends',
 		},
@@ -106,7 +135,7 @@ export const aboutMe = {
 			title: 'MongoDB',
 		},
 		{
-			icon: 'tailwindcss-original',
+			icon: 'tailwindcss-plain',
 			link: '',
 			iconTint: '#e3342f',
 			title: 'Tailwindcss',
@@ -115,7 +144,7 @@ export const aboutMe = {
 			icon: 'android-plain',
 			link: '',
 			iconTint: '#3DDC84',
-			title: 'Android Studio',
+			title: 'Android',
 		},
 		{
 			icon: 'mysql-plain',

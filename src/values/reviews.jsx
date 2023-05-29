@@ -1,36 +1,35 @@
 export const myReviews = [
 	{
-		name: 'John Doe',
-		role: 'CEO',
-		image: './images/bigsur.jpg',
+		name: 'Ken',
+		role: 'Freelancer',
+		image: './images/person.svg',
 		place: {
 			link: 'google.com',
 			name: 'Google',
 		},
 		text: (
 			<p className="text-normal">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae soluta, nemo rerum, quidem, perspiciatis
-				blanditiis sint est doloribus dignissimos magni error corporis facilis suscipit vero nostrum temporibus saepe
-				quas similique.
+				Follows instructions well, but has a tendency to be too literal, and can be lost unless there are firm
+				guidelines. Or sometimes may not take sufficient care to check the instructions before starting.
 			</p>
 		),
-		date: '19 Dec 2022',
+		date: '19 Okt 2022',
 	},
 	{
-		name: 'John Doe',
+		name: 'Wahyu alime',
 		role: 'CEO',
-		image: './images/bigsur.jpg',
+		image: './images/person.svg',
 		place: {
 			link: 'google.com',
-			name: 'Google',
+			name: 'Kembang',
 		},
 		text: (
 			<p className="text-normal">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae soluta, nemo rerum, quidem, perspiciatis
-				blanditiis sint est doloribus dignissimos magni error corporis facilis suscipit vero nostrum temporibus saepe
-				quas similique.
+				Generally good with detail and checks work thoroughly, but there have been one or two minor errors in work
+				presented in the current period Has proven ability to produce creative, original ideas, plans, products or
+				methods,even if they're not always practical, in line with organization needs, or successful.
 			</p>
 		),
-		date: '19 Dec 2022',
+		date: '12 Sep 2021',
 	},
 ];

@@ -1,15 +1,10 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { gotoSection } from '../helpers/common';
+import { gotoSection, scrollTopBody } from '../helpers/common';
 
 function Header() {
 	const location = useLocation();
 	const currentPath = location.pathname.substring(1);
-
-	const scrollTopBody = () => {
-		document.body.scrollTop = 0; // For Safari
-		document.documentElement.scrollTop = 0;
-	};
 
 	const [openNav, setOpenNav] = useState(false);
 	const [navVisible, setNavVisible] = useState(false);
@@ -35,14 +30,9 @@ function Header() {
 						setNavVisible(!navVisible);
 					}, 200);
 				}}
-				className={`${openNav || window.innerWidth > 640 ? 'fade block' : 'fadeout '} ${
-					navVisible || window.innerWidth > 640 ? 'block' : 'hidden'
-				} fixed backdrop-blur-md sm:hidden bg-blacktint top-0 left-0 right-0 bottom-0`}
-			></div>
-			<div
 				className={`${openNav || window.innerWidth > 640 ? 'fade flex' : 'fadeout'} ${
 					navVisible || window.innerWidth > 640 ? 'flex' : 'hidden'
-				} fixed left-1/2 flex-col top-1/2 -translate-y-1/2 -translate-x-1/2 sm:opacity-100 sm:flex-row sm:flex sm:left-0 sm:top-0 sm:translate-x-0 sm:translate-y-0 sm:relative flex items-center gap-16 sm:gap-8`}
+				} fixed top-0 left-0 justify-end pb-8 sm:pb-0 right-0 bottom-0 bg-blacktint backdrop-blur-md sm:backdrop-blur-none sm:bg-transparent flex-col sm:opacity-100 sm:flex-row sm:flex sm:relative flex items-center gap-16 sm:gap-8`}
 			>
 				<Link onClick={(e) => scrollTopBody()} to="/" className={`link-header ${currentPath == '' ? 'on' : ''}`}>
 					<p data-aos="fade-down">
@@ -81,6 +71,17 @@ function Header() {
 						<span className="text-3xl sm:text-xl">Contact</span>
 					</p>
 				</Link>
+				<div className=" sm:hidden flex items-center mt-4 justify-center gap-4">
+					<a target="_blank" href="https://www.instagram.com/zaid.dart/" className="link-header">
+						<i className="text-3xl ri-instagram-line"></i>
+					</a>
+					<a target="_blank" href="https://github.com/Diaz-adrianz" className="link-header">
+						<i className="text-3xl ri-github-fill"></i>
+					</a>
+					<a target="_blank" href="https://www.linkedin.com/in/diaz-adriansyah-1a7a9624a/" className="link-header">
+						<i className="text-3xl ri-linkedin-box-line"></i>
+					</a>
+				</div>
 			</div>
 		</div>
 	);

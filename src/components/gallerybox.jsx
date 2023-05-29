@@ -32,7 +32,7 @@ const GalleryBox = (props) => {
 									setImageOn(img);
 								}, 100);
 							}}
-							className={`w-10 h-10 rounded-lg ${img.src == imageOn.src ? 'border-2 border-accent' : ''}`}
+							className={`w-10 object-cover h-10 rounded-lg ${img.src == imageOn.src ? 'border-2 border-accent' : ''}`}
 						/>
 					);
 				})}
